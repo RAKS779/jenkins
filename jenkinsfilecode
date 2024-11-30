@@ -1,1 +1,20 @@
-there code in this file are jenkins
+pipelinecode
+{
+    agent any
+    stages{
+         stage('Stage1')
+         {
+            steps{
+           echo " this is first stage"
+         }
+         }
+
+         stage('Stage2')
+         {
+            steps{
+           echo " this is second stage"
+         }
+         }
+    }
+
+}
