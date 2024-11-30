@@ -13,6 +13,7 @@ pipelinecode
          {
             steps{
            echo " this is second stage"
+           
          }
          }
     }
