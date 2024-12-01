@@ -6,8 +6,9 @@ pipeline
 environment
 {
      git_url='https://github.com/RAKS779/jenkins.git'
+     git_branch='main'
      git_credentialsId='2_jobfreestyle'
-    git_branch='main'
+   
     
     
 }
@@ -17,11 +18,11 @@ environment
          {
          
             steps{
-            script{
+            script {
                 url: "${env.git_url}"
-               credentialsId: "${env.git_credentialsId}"
-                 git branch: "${env.git_branch}"
-                
+                  git branch: "${env.git_branch}"
+                credentialsId: "${env.git_credentialsId}"
+               
              }
          }
          }
