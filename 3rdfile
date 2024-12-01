@@ -1,1 +1,40 @@
-this is new 3 rd file
+
+pipeline
+{
+    agent any
+
+environment
+{
+    git_branch: 'main',
+     git_credentialsId: '2_jobfreestyle', 
+     git_url: 'https://github.com/RAKS779/MAINPUBLIC.git'
+}
+
+    stages{
+         stage('checkout')
+         {
+         
+            steps{
+             script{
+                gitbranch:"${env.git_branch}"
+                credit:"${env.git_credentialsId}"
+                url:"${env.git_url}"
+             }
+         }
+         }
+
+         stage('check')
+         {
+         
+            steps{
+              sh '''
+          ls -lrt
+          echo $git_branch
+          env
+           '''
+           
+         }
+         }
+    }
+
+}
