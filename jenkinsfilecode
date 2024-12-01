@@ -9,7 +9,7 @@ pipeline
     stages{
          stage('Stage1')
          {
-          sh 'sleep 4 '
+         
             steps{
            echo " this is first stage"
          }
@@ -17,7 +17,7 @@ pipeline
 
          stage('Stage2')
          {
-          sl 'sleep 7'
+         
             steps{
            echo " this is second stage"
            
