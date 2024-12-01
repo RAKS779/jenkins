@@ -5,9 +5,9 @@ pipeline
 
 environment
 {
-    git_branch:'main'
-     git_credentialsId:'2_jobfreestyle'
-     git_url:'https://github.com/RAKS779/MAINPUBLIC.git'
+    git_branch='main'
+     git_credentialsId='2_jobfreestyle'
+     git_url='https://github.com/RAKS779/MAINPUBLIC.git'
 }
 
     stages{
