@@ -15,7 +15,7 @@ environment
          {
          
             steps{
-             script{
+             script {
                 gitbranch: "${env.git_branch}"
                 credit: "${env.git_credentialsId}"
                 url: "${env.git_url}"
