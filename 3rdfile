@@ -29,6 +29,7 @@ environment
             steps{
               sh '''
           ls -lrt
+          echo $git_branch
          
           env
            '''
