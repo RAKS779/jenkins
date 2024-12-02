@@ -6,7 +6,7 @@ pipeline
 environment
 {
      git_url='https://github.com/RAKS779/jenkins.git'
-     git_branch='jenkins'
+     git_branch='main'
      git_credentialsId='2_jobfreestyle'
    
     
@@ -14,7 +14,7 @@ environment
 }
 
     stages{
-         stage('checkout')
+         stage('CHECKOUT')
          {
          
             steps{
