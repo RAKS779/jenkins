@@ -18,13 +18,11 @@ environment
          {
          
             steps{
-            script 
-            {
-                url: "${env.git_url}"
-                  git branch: "${env.git_branch}"
-                credentialsId: "${env.git_credentialsId}"
-               
-             }
+            script {
+                    url: "${env.git_url}"
+                    git branch: "${env.git_branch}"
+                    credentialsId: "${env.git_credentialsId}"
+                  }
          }
          }
 
