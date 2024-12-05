@@ -8,7 +8,7 @@ options {
     /*disableConcurrentBuilds(abortPrevious: true)
     retry(3)
     timeout(time: 1, unit: 'SECONDS')*/
-    timestamps()
+   // timestamps()
  }
 
  triggers {
@@ -21,7 +21,7 @@ options {
         stage('options_trigger')
         {
             steps{
-                echo " inside stages and steps"
+                sh ' sleep 10'
             }
         }
     }
