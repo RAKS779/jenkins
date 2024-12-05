@@ -4,11 +4,7 @@ pipeline
 
     stages
     {
-          stage('Test1_outside') {
-            steps
-            { echo 'buliding'
-            }
-            }
+         
 
 
        stage('testp'){
@@ -20,11 +16,13 @@ pipeline
                 echo ' running....test1'
               }
            }
-           stage('Test2'){
-          steps{
-                echo 'reunning 2 '
-          }
-            }
+           stage('Test2') {
+              steps{
+       
+                echo ' running....test1'
+              }
+           }
+          
              }
          }
        
