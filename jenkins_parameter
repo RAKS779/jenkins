@@ -1,0 +1,22 @@
+pipeline
+{ agent any 
+
+    parameters {
+  booleanParam defaultValue: false, description: 'select checkbox', name: 'checkbox'
+}
+
+
+stages {
+ stage('Parametervar'){
+steps{
+    echo "Boolean : ${params.checkbox}"
+}
+
+ }
+}
+
+
+
+
+
+}
