@@ -27,8 +27,9 @@ pipeline
            sh 'sleep 4 '
         }
     }*/
- stage('Stage3'){
-     when 
+ stage('stage3')
+ {
+    when 
       {
         expression {
             env.GIT_BRANCH='origin/main'
