@@ -4,7 +4,12 @@ pipeline
 
     stages
     {
-         
+         stage('Test34') {
+              steps{
+       
+                echo " running....test1"
+              }
+           }
 
 
        stage('testp'){
