@@ -27,7 +27,7 @@ pipeline
             }
              }
          }
-       }
+       
         
         
         stage('Test2_oustside') {
@@ -36,6 +36,7 @@ pipeline
             }
             }
         
+    }
     }
 
 
@@ -52,4 +53,3 @@ pipeline
 
 
     
-}
