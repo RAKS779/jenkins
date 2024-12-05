@@ -29,7 +29,7 @@ environment
          }
          }
 
-         stage('check')
+         stage('CHECK')
          {
          
             steps{
