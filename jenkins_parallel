@@ -11,8 +11,8 @@ pipeline
             }
 
 
-        stage('Parallel')
-        { Parallel {
+        stage('Parallel') {
+             Parallel {
             stage('Test1') {
             steps {
                  sh 'sleep 4'
@@ -23,8 +23,9 @@ pipeline
                 sh 'sleep 4'
             }
             }
+             }
         }
-        }
+        
         stage('Test2_oustside') {
             steps
             { sh 'sleep 4'
