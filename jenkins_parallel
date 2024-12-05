@@ -12,9 +12,9 @@ pipeline
            }
 
 
-       stage('testp'){
+      
   
-             Parallel {
+            
             stage('Test1') {
               steps{
        
@@ -28,8 +28,8 @@ pipeline
               }
            }
           
-             }
-         }
+             
+         
        
         
         
