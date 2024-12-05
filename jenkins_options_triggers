@@ -9,11 +9,11 @@ options {
     //retry(3)
    // timeout(time: 1, unit: 'SECONDS')
     timestamps()
-}
+ }
 
-triggers {
+ triggers {
     cron(*/2****)
-}
+ }
 
 
     stages
