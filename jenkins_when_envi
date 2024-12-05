@@ -54,7 +54,7 @@ pipeline {
     when 
       {
        environment {
-        name :GIT_BRANCH  // this is key values present in jenkis u can find list 
+        name : 'GIT_BRANCH' // this is key values present in jenkis u can find list 
         Branch :'origin/main'
         }
    
