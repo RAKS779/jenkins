@@ -11,7 +11,7 @@ pipeline
             }
 
 
-        stage('Parallel Testing')
+        /*stage('Parallel')
         { Parallel{
             stage('Test1') {
             steps
@@ -24,7 +24,7 @@ pipeline
             }
             }
         }
-        }
+        }*/
         stage('Test2_oustside') {
             steps
             { sh 'sleep 4'
