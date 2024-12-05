@@ -1,5 +1,50 @@
 pipeline
-
 {
+    agent any
+
+    stages
+    {
+          stage('Test1_outside') {
+            steps
+            { sh 'sleep 4'
+            }
+            }
+
+
+        stage('Parallel Testing')
+        { Parallel{
+            stage('Test1') {
+            steps
+            { sh 'sleep 4'
+            }
+            }
+             stage('Test2') {
+            steps
+            { sh 'sleep 4'
+            }
+            }
+        }
+        }
+        stage('Test2_oustside') {
+            steps
+            { sh 'sleep 4'
+            }
+            }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 }
