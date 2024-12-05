@@ -32,14 +32,14 @@ pipeline
     when 
       {
         expression {
-            env.GIT_BRANCH='origin/main'
+            env.GIT_BRANCH!='origin/main'
         }
    
     }
 
         steps{
             echo " wait this branch"
-           sh 'sleep 4 '
+           
         }
  }
  
