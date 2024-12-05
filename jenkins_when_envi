@@ -6,13 +6,15 @@ pipeline {
         steps{
            echo " this stage 1"
     }
-
+ 
+    }
 
     stage('Stage2'){
         steps{
            echo " this stage 2"
         }
     }
+
 
 
     /*stage('Stage3'){
