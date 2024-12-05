@@ -56,7 +56,7 @@ options{
     when 
       {
         expression {
-            params.GIT_BRANCH!='origin/main'
+            params.GIT_BRANCH=='origin/main'
         }
    
     }
