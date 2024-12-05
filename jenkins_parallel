@@ -11,7 +11,7 @@ pipeline
             }
 
 
-       
+       stage('parallel_test'){
              Parallel {
             stage('Test1') {
             steps {
@@ -24,6 +24,7 @@ pipeline
             }
             }
              }
+       }
         
         
         stage('Test2_oustside') {
