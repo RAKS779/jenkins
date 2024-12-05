@@ -58,8 +58,8 @@ options{
     when 
       {
        environment {
-        name:'GIT_BRANCH', 
-        Branch:'origin/main'
+        name:GIT_BRANCH 
+        Branch:origin/main
         }
    
     }
