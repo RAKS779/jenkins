@@ -55,14 +55,13 @@ options{
  //3rd nd way of using when 
  stage('stage3')
  {
-    when 
-      {
+    when{
        environment {
-        name:GIT_BRANCH 
-        Branch:origin/main
+        name: 'GIT_BRANCH' 
+        Branch: 'origin/main'
         }
-   
     }
+    
     steps{
             echo " wait this branch"
            
