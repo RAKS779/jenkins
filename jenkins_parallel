@@ -18,7 +18,7 @@ pipeline
        
                 echo ' running....test1'
             
-            },
+           }
            'Test2'{
           
                 echo 'reunning 2 '
