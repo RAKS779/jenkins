@@ -1,7 +1,11 @@
 pipeline {
  agent any 
   
-
+options{
+     ansiColor('xterm')
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+    timestamps()
+}
   stages {
  
     stage('Stage1'){
