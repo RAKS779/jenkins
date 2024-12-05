@@ -1,0 +1,19 @@
+pipeline
+{
+    agent any
+
+options {
+    buildDiscarder(logRotator(numToKeepStr: '5')) }
+}
+
+
+    stages
+    {
+        stage('options_trigger')
+        {
+            steps{
+                echo " inside stages and steps"
+            }
+        }
+    }
+}
