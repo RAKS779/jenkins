@@ -12,17 +12,18 @@ pipeline
 
 
        stage('testp'){
-         steps {
+  
              Parallel {
-           Test1 {
+            stage('Test1') {
+              steps{
        
                 echo ' running....test1'
-            
+              }
            }
-           Test2{
-          
+           stage('Test2'){
+          steps{
                 echo 'reunning 2 '
-            
+          }
             }
              }
          }
