@@ -58,8 +58,8 @@ options{
     when 
       {
        environment {
-        name: 'GIT_BRANCH' // this is key values present in jenkis u can find list 
-        Branch: 'origin/main'
+        name:'GIT_BRANCH', 
+        Branch:'origin/main'
         }
    
     }
