@@ -17,7 +17,7 @@ pipeline {
         }
     }
 
-
+// first way of using when
 
     /*stage('Stage3'){
      when 
@@ -30,7 +30,9 @@ pipeline {
            sh 'sleep 4 '
         }
     }*/
- stage('stage3')
+
+    // 2 nd way of using when 
+ /*stage('stage3')
  {
     when 
       {
@@ -39,12 +41,31 @@ pipeline {
         }
    
     }
-
-        steps{
+    steps{
             echo " wait this branch"
            
         }
  }
+ */
+
+ //3rd nd way of using when 
+ stage('stage3')
+ {
+    when 
+      {
+        expression {
+            env.GIT_BRANCH =='origin/main'
+        }
+   
+    }
+    steps{
+            echo " wait this branch"
+           
+        }
+ }
+ 
+
   }
+  
 
 }
