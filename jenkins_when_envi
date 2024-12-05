@@ -51,9 +51,23 @@ options{
         }
  }
  */
-
- //3rd nd way of using when 
  stage('stage3')
+ {
+    when 
+      {
+        expression {
+            params.GIT_BRANCH!='origin/main'
+        }
+   
+    }
+    steps{
+            echo " wait this branch"
+           
+        }
+ }
+
+ //4rd nd way of using when  // not working need to check 
+ /*stage('stage3')
  {
     when{
        environment {
@@ -67,7 +81,7 @@ options{
            
         }
  }
- 
+ */
 
   }
   
