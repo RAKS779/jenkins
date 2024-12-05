@@ -1,0 +1,45 @@
+pipeline
+{
+ agent any 
+
+ 
+    stage('Stage1'){
+        steps{
+           echo " this stage 1"
+    }
+
+
+    stage('Stage2'){
+        steps{
+           echo " this stage 2"
+        }
+    }
+
+
+    /*stage('Stage3'){
+     when 
+      {
+    branch pattern:".*main*" , comparator:"REGEXP"
+    }
+
+        steps{
+            echo " wait this branch"
+           sh 'sleep 4 '
+        }
+    }*/
+ stage('Stage3'){
+     when 
+      {
+        expression {
+            env.GIT_BRANCH='origin/main'
+        }
+   
+    }
+
+        steps{
+            echo " wait this branch"
+           sh 'sleep 4 '
+        }
+ }
+ 
+}
