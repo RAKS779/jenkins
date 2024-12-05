@@ -4,6 +4,7 @@ pipeline
 
     parameters {
   booleanParam defaultValue: false, description: 'select checkbox', name: 'checkbox'
+  string description: 'Bulid project', name: 'Env_Project', trim: true
    }
 
 
