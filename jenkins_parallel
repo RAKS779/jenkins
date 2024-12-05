@@ -14,12 +14,12 @@ pipeline
        stage('testp'){
          steps {
              Parallel {
-           'Test1': {
+           'Test1' {
        
                 echo ' running....test1'
             
-            },
-           'Test2': {
+            }
+           'Test2'{
           
                 echo 'reunning 2 '
             
