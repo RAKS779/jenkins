@@ -15,12 +15,12 @@ pipeline
              Parallel {
             stage('Test1') {
             steps {
-                 sh 'sleep 4'
+                 sh 'sleep 2'
             }
             }
              stage('Test2') {
             steps {
-                sh 'sleep 4'
+                sh 'sleep 2'
             }
             }
              }
