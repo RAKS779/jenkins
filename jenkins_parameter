@@ -5,6 +5,7 @@ pipeline
     parameters {
   booleanParam defaultValue: false, description: 'select checkbox', name: 'checkbox'
   string description: 'Bulid project', name: 'Env_Project', trim: true
+  choice choices: ['option1 ', 'option2', 'option3'], description: 'choose any one ', name: 'Choice'
    }
 
 
@@ -12,6 +13,8 @@ pipeline
              stage('STAGE1') {
                                            steps {
                             echo "Boolean : ${params.checkbox}"
+                            echo "Stringval : ${params.Env_Project}"
+                            echo "choicevalue : ${params.Choice}"
                   }
 
          }
