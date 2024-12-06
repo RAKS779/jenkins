@@ -53,6 +53,6 @@ pipeline
         {
             echo " this is unstable  stage "
         }
-
+    }
 
 }
