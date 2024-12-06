@@ -20,7 +20,7 @@ pipeline
          {
          
             steps{
-              sh 'exit 1'
+              sh 'sleep 10 '
            
            
          }
@@ -35,6 +35,16 @@ pipeline
         failure {
             echo 'this is failure stage '
         }
-    }
+        
+        aborted 
+        {
+            echo " this is aborted stage "
+        }
+
+         unstable
+        {
+            echo " this is unstable  stage "
+        }
+
 
 }
