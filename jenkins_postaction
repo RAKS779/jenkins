@@ -1,0 +1,40 @@
+pipeline
+{
+    agent {
+       label 'Slave1'
+    }
+
+
+
+    stages{
+         stage('Stage1')
+         {
+         
+            steps{
+             
+           echo " this is first stage"
+         }
+         }
+
+         stage('Stage2')
+         {
+         
+            steps{
+              sh 'exit 1'
+           
+           
+         }
+         }
+    }
+
+    post {
+        always{
+            echo " This is a  always stage"
+        }
+
+        failure {
+            echo 'this is failure stage '
+        }
+    }
+
+}
