@@ -20,6 +20,20 @@ pipeline
          {
          
             steps{
+
+// below is try and catch of scripted
+script {
+                try {
+        sh 'might fail'
+    } catch (err) {
+        echo "Caught: ${err}"
+        currentBuild.result = 'FAILURE'
+    }
+}
+// above try and catch is old method which is used scripted pipeline which is less
+
+
+
                 catchError  (stageResult: 'FAILURE',buildResult: 'SUCCESS') {
               sh ''' 
                echo " before exit "
