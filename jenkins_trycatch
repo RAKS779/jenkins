@@ -1,0 +1,33 @@
+pipeline
+{
+    agent {
+       label 'Slave1'
+    }
+
+
+
+    stages{
+         stage('Stage1')
+         {
+         
+            steps{
+              sh 'sleep 7'
+           echo " this is first stage"
+         }
+         }
+
+         stage('Stage2')
+         {
+         
+            steps{
+                catchError { (stageResult:'FAILURE' , buildResult:'SUCCESS')
+              sh ''' 
+               echo " before exit "
+               exit 1
+               echo "After Exit "
+                }
+         }
+         }
+    }
+
+}
