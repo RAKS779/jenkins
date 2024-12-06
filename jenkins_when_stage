@@ -1,6 +1,11 @@
 pipeline {
  agent any 
   
+   parameters {
+  choice choices: ['STAGE1 ', 'STAGE2'], description: 'choose any stage ', name: 'Choice'
+   }
+
+
 options{
      ansiColor('xterm')
     buildDiscarder(logRotator(numToKeepStr: '5'))
@@ -8,31 +13,45 @@ options{
 }
   stages {
  
-    stage('Stage1'){
+    stage('CHECKOUT'){
         steps{
-           echo " this stage 1"
+           script {
+         checkout   scmGit( branches: [[name: 'main']],
+            userRemoteConfigs: [
+                         [ credentialsId: '2_jobfreestyle',
+                           url: 'https://github.com/RAKS779/jenkins.git' ]
+                         ])
+           }
     }
  
     }
 
-    stage('Stage2'){
+    stage('STAGE1'){
+
+        when 
+      {
+        expression {
+            params.Choice== 'STAGE1'
+        }
+   
+    }
         steps{
-           echo " this stage 2"
+           echo " this stage 1..."
         }
     }
 
 
- stage('stage3')
+ stage('STAGE2')
  {
     when 
       {
         expression {
-            params.GIT_BRANCH=='origin/main'
+            params.Choice== 'STAGE2'
         }
    
     }
     steps{
-            echo " wait this branch"
+            echo " this stage 2 "
            
         }
  }
