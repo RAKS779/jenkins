@@ -25,6 +25,8 @@ pipeline
                echo " before exit "
                exit 1
                echo "After Exit "
+
+               '''
                 }
          }
          }
