@@ -1,0 +1,45 @@
+pipeline {
+ agent any 
+  
+options{
+     ansiColor('xterm')
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+    timestamps()
+}
+  stages {
+ 
+    stage('Stage1'){
+        steps{
+           echo " this stage 1"
+    }
+ 
+    }
+
+    stage('Stage2'){
+        steps{
+           echo " this stage 2"
+        }
+    }
+
+
+ stage('stage3')
+ {
+    when 
+      {
+        expression {
+            params.GIT_BRANCH=='origin/main'
+        }
+   
+    }
+    steps{
+            echo " wait this branch"
+           
+        }
+ }
+
+
+
+  }
+  
+
+}
