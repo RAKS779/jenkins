@@ -1,1 +1,52 @@
-this is not becuase it is having dependcy on env varaiable ,the  env is not running
+
+pipeline
+{
+    agent any
+
+environment
+{
+     git_url='https://github.com/RAKS779/python.git'
+     git_branch='main'
+     git_credentialsId='freestyle'
+   
+    
+    
+}
+
+    stages{
+         stage('CHECKOUT')
+         {
+         
+            steps{
+              script {
+                checkout scmGit(branches: [[name: "${env.git_branch}"]],
+                 extensions: [], 
+                 userRemoteConfigs: [[credentialsId: "${env.git_credentialsId}", url: "${env.git_url}"]])
+                      
+                      
+                      
+                   
+                       
+
+
+              }
+           
+         }
+         }
+
+         stage('CHECK')
+         {
+         
+            steps{
+              sh '''
+          ls -lrt
+          echo $git_branch
+         
+          env
+           '''
+           
+         }
+         }
+    }
+
+}
